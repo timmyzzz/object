@@ -1,0 +1,254 @@
+@charset "UTF-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
+    margin:0;
+    padding:0;
+    }
+    h1,h2,h3,h4,h5,h6{
+    font-size:12px;
+    font-weight:normal;
+    }
+    ol,ul,li{
+    list-style:none
+    }
+    b,strong{
+    font-weight:normal;
+    }
+    em,i{
+    font-style:normal;
+    }
+    a,u{
+    text-decoration:none;
+    }
+    img{
+    display:block;
+    }
+    //头部
+    .site-header{
+        height: 100px;
+        font-size: 12px;
+        border-bottom: 2px solid #ff6700;
+        background: #fff;
+        color: #b0b0b0;
+    }
+    .container{
+        width: 1226px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .header-logo{
+        width: 93px;
+        margin-top: 26px;
+        float: left;
+        a{
+            display: block;
+            width: 48px;
+            height: 48px;
+            background-color: #ff6700;
+            background-image: url(https://s01.mifile.cn/i/mi-logo.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }    
+    }
+    .header-title{
+        height: 48px;
+        float: left;
+        margin-top: 26px;
+        h2{
+            float: left;
+            line-height: 48px;
+            margin-bottom: 0;
+            font-size: 28px;
+            color: #424242;
+        }
+        p{
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+    }
+    .info{
+        margin-top: 30px;
+        line-height: 40px;
+        float: right;
+        height: 40px;
+        color: #b0b0b0;
+        a{
+            padding: 0 5px;
+            float: left;
+            color: #757575;
+            font-size: 12px;
+        }
+        span{
+            color: #e0e0e0;
+            float: left;
+        }
+    }
+
+    //购物车主要内容
+.page-main{
+    padding-top: 38px;
+    padding-bottom: 38px;
+    background-color: #f5f5f5;
+}
+.goods-list{
+    background-color: #fff;
+    overflow: hidden;
+    .list-head{
+        height: 70px;
+        line-height: 70px;
+        padding-right: 26px;
+        color: #424242;
+    }
+}
+.col-check{
+    float: left;
+    width: 95px;
+    line-height: 70px;
+    i{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        border: 1px solid #e0e0e0;
+        margin-left: 24px;
+        background-color: #fff;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+}
+.col-img{
+    width: 120px;
+    float: left;
+    padding-right:5px;
+}
+.col-name{
+    width: 380px;
+    float: left;
+}
+.col-price{
+    width: 140px;
+    padding-right: 18px;
+    text-align: center;
+    color: #424242;
+    float: left;
+}
+.col-num{
+    width: 150px;
+    text-align: center;
+    color: #424242;
+    float: left;
+}
+.col-total{
+    width: 120px;
+    padding-right: 81px;
+    text-align: right;
+    float: left;
+}
+.col-action{
+    width: 80px;
+    text-align: center;
+    float: left;
+    a{
+        font-size: 14px;
+        color: #333;
+    }
+}
+//商品列表
+.list-body{
+    padding: 15px 26px 15px 0;
+    border-top: 1px solid #e0e0e0;
+    line-height: 80px;
+    color: #424242;
+    img{
+        width: 80px;
+        height: 80px;
+    }
+    .item-box{
+        display: none;
+    }
+    .item-box  .col{
+        padding-top: 15px;
+    }
+
+    .change-goods-num{
+        width: 148px;
+        height: 38px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        background-color: #fff;
+        position: relative;
+        a{
+            float: left;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            color: #757575;
+            font-size: 20px;
+            transition: all .3s;
+            text-align: center;
+        }
+        input{
+            float: left;
+            width: 72px;
+            height: 38px;
+            line-height: 38px;
+            padding: 0;
+            border-width: 0;
+            color: #424242;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.cart-bar{
+    height: 50px;
+    text-align: right;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.section-left{
+    float: left;
+    a{
+        line-height: 50px;
+        margin-left: 32px;
+        color: #757575;
+    }
+    span{
+        margin-left: 16px;
+        padding-left: 16px;
+        border-left: 1px solid #eee;
+        color: #757575;
+        i{
+            color: #ff6700;
+        }
+    }
+}
+.cart-price{
+    padding-left: 13px;
+    color: #ff6700;
+    em{
+        font-size: 30px;
+    }
+}
+.btn{
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    margin-left: 50px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    background-color: #e0e0e0;
+    color:#b0b0b0;
+    border: 1px solid #e0e0e0;
+}

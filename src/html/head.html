@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
+    margin:0;
+    padding:0;
+    }
+    h1,h2,h3,h4,h5,h6{
+    font-size:12px;
+    font-weight:normal;
+    }
+    ol,ul,li{
+    list-style:none
+    }
+    b,strong{
+    font-weight:normal;
+    }
+    em,i{
+    font-style:normal;
+    }
+    a,u{
+    text-decoration:none;
+    }
+    img{
+    display:block;
+    }
+    .clear_fix::after{
+    content:"";
+    display:block;
+    clear:both;
+    height:0;
+    overflow:hidden;
+    }
+    .fl{
+    float:left;
+    }
+    .fr{
+    float:right;
+    }
+    input{
+    outline:none;
+    }
+        .header-nav-wrap{
+    height: 40px;
+    background-color: #333;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.header-nav{
+    width: 1226px;
+    height:40px;
+    margin: 0 auto;
+}
+.header-left{
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    font-size: 12px;
+}
+.header-left a{
+    display: inline-block;
+    line-height: 40px;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.header-left a:hover{
+    color:#fff;
+}
+.header-left span{
+    margin: 0.3em;
+    color: #424242;
+}
+/* // 购物车 */
+.header-cart{
+    width: 120px;
+    height: 40px;
+    float: right;
+    margin-left:15px;
+    font-size: 12px;
+}
+.header-cart .cart-mini{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b0b0b0;
+    background-color: #424242;
+}
+.cart-mini em{
+    margin-right: 4px;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: -4px;
+
+}
+.header-right{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+}
+.header-right a{
+    color:#b0b0b0;
+    line-height: 40px;
+    display: inline-block;
+}
+.header-right .link{
+    padding: 0 5px;
+    text-align: center;
+    float: left;
+}
+.header-right span{
+    float: left;
+    color:#424242;
+    line-height: 40px;
+}
+.header-right .message{
+    padding: 0 10px;
+}
+.header-right .hover:hover{
+    color: #fff;
+}
+/* // 头部logo */
+.logo-wrap{
+    height: 100px;
+}
+.logo-content{
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+}
+.head-logo{
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+}
+.head-logo .logo{
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    background-color: #ff6700;
+    background-image: url(https://s02.mifile.cn/assets/static/image/mi-logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.head-navlist{
+    float: left;
+    width: 850px;
+}
+.head-navlist{
+    float: left;
+    width: 850px;
+}
+.head-navlist .nav-list{
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 1100px;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    list-style-type: none;
+    font-size: 16px;
+}
+.head-navlist .nav-list .nav-item{
+        float: left;
+    }
+    .head-navlist .nav-list .nav-item   .link{
+            display: block;
+            padding: 26px 10px 38px;
+            color: #333;
+        }
+    .head-navlist .nav-list .nav-item      .link:hover{
+            color: #ff6700;
+        }
+.nav-list .category{
+    position: relative;
+    float: left;
+    width: 127px;
+    height: 88px;
+    padding-right: 15px;
+}
+.nav-list .category:hover .site-category{
+    display: block;
+}
+.site-category{
+        position: absolute;
+        top: 88px;
+        left: -92px;
+        z-index: 21;
+        width: 234px;
+        height: 460px;
+        font-size: 14px;
+        display: none; 
+    }
+.site-category-list{
+    z-index: 21;
+    height: 420px;
+    border: 0;
+    color: #fff;
+    background: rgba(105,101,101,.6);
+    margin: 0;
+    padding: 20px 0;
+    list-style-type: none;
+}
+.site-category-list .title{
+        position: relative;
+        display: block;
+        padding-left: 30px;
+        height: 42px;
+        line-height: 42px;
+        color: #fff;
+    }
+/* //商品导航列表 */
+.category-item:hover{
+    background-color: #ff6700 ;
+}
+.category-item:hover .cate-children{
+    display: block;
+}
+.cate-children{
+    width: 992px;
+    display: none;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 999;
+    height: 458px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    display: none;
+}
+.child-list{
+        width: 248px;
+        float: left;
+        height: 458px;
+        margin: 0;
+        padding: 2px 0;
+        list-style-type: none;
+    }
+    .child-list  li{
+            position: relative;
+            float: left;
+            width: 265px;
+            height: 76px;
+        }
+        .child-list li a{
+                display: block;
+                padding: 18px 20px;
+                line-height: 40px;
+                color: #333;
+                transition: color .2s;
+                
+               
+            }
+            .child-list li a    img{
+                    float: left;
+                    margin-right: 12px;
+                    vertical-align: middle;
+                    width: 40px;
+                    height: 40px;
+                }
+            .child-list li a   span{
+                    float: left;
+                    width: 172px;
+                    line-height: 40px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+/* // 搜索框 */
+.head-search{
+    float: right;
+    width: 296px;
+    margin-top: 25px;
+}
+.search-form{
+        position: relative;
+        width: 296px;
+        height: 50px;
+        z-index: 20;
+        
+        
+        
+    }
+    .search-text{
+            position: absolute;
+            top: 0;
+            border: 1px solid #e0e0e0;
+            outline: 0;
+            right: 51px;
+            z-index: 1;
+            width: 223px;
+            height: 48px;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 48px;
+        }
+        .search-submit{
+            right: 0;
+            z-index: 2;
+            width: 52px;
+            height: 48px;
+            font-size: 24px;
+            line-height: 24px;
+            background: #fff;
+            color: #616161;
+            position: absolute;
+            top: 0;
+            border: 1px solid #e0e0e0;
+            outline: 0;
+        }
+        .search-submit:hover{
+            background-color:#ff6700 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- 头部导航 -->
+        <div class="header-nav-wrap">
+            <div class="header-nav">
+                <div class="header-left">
+                    <a href="">小米商城</a>
+                    <span>|</span>
+                    <a href="">MIUI</a>
+                    <span>|</span>
+                    <a href="">loT</a>
+                    <span>|</span>
+                    <a href="">云服务</a>
+                    <span>|</span>
+                    <a href="">金融</a>
+                    <span>|</span>
+                    <a href="">有品</a>
+                    <span>|</span>
+                    <a href="">小爱开放平台</a>
+                    <span>|</span>
+                    <a href="">企业团购</a>
+                    <span>|</span>
+                    <a href="">资质证照</a>
+                    <span>|</span>
+                    <a href="">协议规则</a>
+                    <span>|</span>
+                    <a href="">下载app</a>
+                    <span>|</span>
+                    <a href="">Select Location</a>
+                </div>
+                <!-- 购物车 -->
+                <div class="header-cart">
+                    <a href="" class="cart-mini">
+                        <em class="iconfont-cart">
+                            
+                        </em>
+                        购物车
+                        <span>（0）</span>
+                    </a>
+                </div>
+                <div class="header-right">
+                    <a href="" class="link hover">登录</a>
+                    <span>|</span>
+                    <a href="" class="link hover">注册</a>
+                    <span>|</span>
+                    <span class="message">
+                        <a href="" class="hover">消息通知</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- 头部logo -->
+    <div class="logo-wrap">
+        <div class="logo-content">
+            <div class="head-logo">
+                <a href="" class="logo">
+                </a>
+            </div>
+            <div class="head-navlist">
+                <ul class="nav-list">
+                    <li class="category nav-item">
+                        <a href="" class="link">
+                            <span class="text">所有商品列表</span>
+                        </a>
+                        <div class="site-category">
+                            <ul class="site-category-list">
+                                <li class="category-item">
+                                    <a href="" class="title">手机 电话卡</a>
+                                    <div class="cate-children">
+                                        <ul class="child-list">
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/461bf013d08a7a91423cafcbc5ff9339.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b0f790442e629d548f65a3f3902b7d0a.png?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e1631ce0bdbbd86918e516412f49de13.png?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d622e8a81f81caa0f619ee750cf64501.png?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4a7a4f24061860901f724b6ba6d75fd9.png?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="child-list">
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="child-list">
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="child-list">
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://localhost/object/src/html/list.html">
+                                                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/92b463f8e502e5d26ac488a252a05b58.jpg?thumb=1&w=45&h=45&f=webp&q=90" alt="">
+                                                    <span>Redmi K30 Pro</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">电视 盒子</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">笔记本 显示器 平板</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">家电 插线板</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">出行 穿戴</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">智能 路由器</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">电源 配件</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">健康 儿童</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">耳机 音响</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="title">生活 箱包</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">小米手机</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">Redmi 红米</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">电视</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">笔记本</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">家电</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">路由器</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">智能硬件</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">服务</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <span class="text">社区</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 搜索框 -->
+            <div class="head-search">
+                <form action="" class="search-form">
+                    <input type="search" class="search-text">
+                    <input type="submit" value="" class="search-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/pagination.css">
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 头部 -->
+    <div class="head-wrap"></div>
+    <div class="cumbs-wrap">
+        <div class="cumbs">
+            <a href="">首页</a>
+            <span>></span>
+            <a href="">全部结果</a>
+            <span>></span>
+        </div>
+    </div>
+    <div class="filter-wrap">
+        <div class="filter">
+            <div class="filter-list">
+                <ul>
+                   <span> 分类： </span>
+                   <li>
+                       <a href="">全部</a>
+                   </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 商品列表 -->
+    <div class="goods-wrap">
+        <div class="goods">
+            <div class="goods-list-box">
+                <ul>
+                    <li class="active first">
+                       <a href="">综合</a> 
+                    </li>
+                    <li>
+                        <a href="">新品</a> 
+                     </li>
+                     <li>
+                        <a href="">销量</a> 
+                     </li>
+                     <li>
+                        <a href="">价格</a> 
+                     </li>
+                </ul>
+            </div>
+            <div class="goods-list-wrap">
+                <div class="goods-list">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="pagelist">
+            <div class="m-style page">
+            </div>
+        </div>
+    </div>
+<div class="footer-wrap">
+
+</div>
+<script src="../script/list.js"></script>
+<script src="../script/jquery.pagination.js"></script>
+    <script>
+        $('.head-wrap').load('http://localhost/object/src/html/head.html');
+        $('.footer-wrap').load('http://localhost/object/src/html/footer.html');
+    </script>
+</body>
+</html>

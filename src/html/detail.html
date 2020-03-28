@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <div class="head-wrap">
+
+    </div>
+<!-- 标题栏 -->
+<div class="title-box-wrap">
+    <div class="title-box">
+        <div class="container">
+            <h2 class="con-title"></h2>
+            <div class="right">
+                <a href="">用户评价</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 商品详情 -->
+<div class="buybox">
+    <div class="buybox-main">
+        <div class="buybox-left">
+            <div class="wrap">
+                <div id="spicbox">
+                    <img src="" alt="" id="spic">
+                    <div id="sf"></div>
+                </div>
+                <div id="bf">
+                    <img src="" alt="" id="bpic">
+                </div>
+                <div id="ulist">
+                    <a href="javascript:;" id="left">&lt;</a>
+                    <div id="list">
+                        <ul>
+    
+                        </ul>
+                    </div>
+                    <a href="javascript:;" id="right">&gt;</a>
+                </div>
+            </div>
+            </div>
+        
+        <!-- 明细 -->
+        <div class="buybox-right">
+            <p class="goods-title"></p>
+            <div class="xm-main">
+                <p class="ziying">小米自营</p>
+            </div>
+            <div class="xm-price">
+                <span class="price"></span>元
+            </div>
+            <div class="address">
+                <div class="address-main">
+
+                </div>
+            </div>
+            <!-- 产品版本 -->
+            <div class="list-wrap">
+                <div class="list-main">
+                    <div class="choose-color"> 选择颜色  </div>
+                    <div class="color">白色</div>
+                    <div class="numbox">
+                        <div class="num choose-color">
+                            数量
+                        </div>
+                        <input type="text" value="1" class="number">
+                    </div>
+                </div>
+            </div>
+            <!-- 购买按钮 -->
+
+            <div class="buybtn">
+                <li>
+                    <a href="javascript:;">加入购物车</a>
+                </li>
+            </div>
+        </div>
+        
+    </div>   
+    </div>
+</div>
+    <div class="footer-wrap">
+
+    </div>
+
+    <script>
+        $('.head-wrap').load('http://localhost/object/src/html/head.html');
+        $('.footer-wrap').load('http://localhost/object/src/html/footer.html');
+    </script>
+    <script src="../script/jscookie.js"></script>
+    <script src="../script/detail.js"></script>
+    
+</body>
+</html>
