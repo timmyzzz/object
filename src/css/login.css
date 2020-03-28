@@ -48,157 +48,101 @@ input {
   outline: none;
 }
 
-body {
-  background-color: #f9f9f9;
-  overflow: hidden;
+.logo-wrap {
+  margin: 0;
+}
+.logo-wrap .logo {
+  width: 1130px;
+  margin: 0 auto;
+}
+.logo-wrap .logo .logo-content {
+  width: 200px;
+  height: 98px;
+  background: url(https://account.xiaomi.com/static/res/7f6f2f5/account-static/respassport/acc-2014/img/mistore_logo.png) no-repeat;
 }
 
-.box {
-  margin-top: 60px;
+.content {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8e9e29628af90be1468d6ddad0f01e48.jpg);
+  width: 100%;
+  height: 588px;
+  position: relative;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.main-content {
+  padding-top: 32px;
+  width: 1130px;
+  margin: 0 auto;
 }
 
 .layout {
-  width: 854px;
-  margin: 0 auto;
-  padding-bottom: 10px;
+  width: 410px;
+  min-height: 556px;
+  font-size: 14px;
+  z-index: 4;
   background-color: #fff;
-}
-
-.concent {
-  padding-bottom: 30px;
-  background: #fff;
-  padding: 0 34px 0;
-  min-height: 300px;
-}
-
-.logo-area {
-  padding-bottom: 40px;
-  display: block;
-}
-.logo-area a {
-  width: 49px;
-  height: 48px;
-  margin: 0 auto;
-  display: block;
-  cursor: default;
-  background-image: url(https://account.xiaomi.com/static/res/349d9c1/account-static/respassport/acc-2014/img/milogo.png);
-}
-
-.title {
-  font-size: 30px;
-  font-weight: normal;
-  text-align: center;
-}
-
-.regbox {
-  width: 332px;
-  padding: 30px 0;
-  line-height: 20px;
-  margin: 0 auto;
-  min-height: 10px;
-}
-.regbox .phone-step {
-  line-height: 20px;
-  font-size: 14px;
-}
-.regbox .phone-step .tit-normal {
-  padding-bottom: 5px;
-  color: #333;
-  font-weight: normal;
-  font-size: 14px;
-}
-.regbox .phone-step .tits {
-  height: 40px;
-  padding-left: 14px;
-  line-height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid #e8e8e8;
-  color: #555;
-  cursor: pointer;
-}
-.regbox .phone-step .tits p {
-  float: left;
-  width: 275px;
-  border-right: 1px solid #e8e8e8;
-  cursor: pointer;
-}
-.regbox .phone-step .tits i {
+  max-width: 854px;
   float: right;
-  background: url(https://account.xiaomi.com/static/res/0eeaaed/passport/oauth/images/icon_user.png);
-  width: 16px;
-  height: 16px;
-  margin: 11px 12px 0 12px;
+  margin-right: 0;
 }
 
-.tips {
-  margin-bottom: 15px;
-}
-
-.list-tit {
-  width: 54px;
+.nav-tabs {
+  padding: 27px 0 24px;
   text-align: center;
-  padding: 0 9px;
-  height: 40px;
-  line-height: 40px;
-  display: block;
-  border: 1px solid #e8e8e8;
-  color: #555;
-  float: left;
+  font-size: 24px;
+  color: #666;
 }
-.list-tit p {
-  float: left;
-  width: auto;
-  border-right: 0 none;
+.nav-tabs a {
+  color: #666;
 }
-.list-tit i {
-  float: left;
-  margin: 17px 0 0 10px;
-  width: 0;
-  height: 0;
-  line-height: 0;
-  font-size: 0;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #9d9d9d transparent transparent transparent;
+.nav-tabs .now {
+  color: #f56600;
+}
+.nav-tabs span {
+  width: 1px;
+  height: 24px;
+  margin: 0 35px 0 42px;
+  border: 1px solid #e0e0e0;
 }
 
-.phone {
-  float: left;
-  padding-bottom: 15px;
-}
-.phone input {
-  width: 234px;
-  height: 20px;
-  line-height: 20px;
-  padding: 10px;
-  display: inline-block;
-  border: 1px solid #e8e8e8;
-}
-
-.sub input {
-  width: 330px;
-  height: 42px;
+.login-area {
+  width: 348px;
+  padding-bottom: 0;
   margin: 0 auto;
-  line-height: 42px;
+}
+.login-area input {
+  width: 306px;
+  height: 22px;
+  margin-bottom: 14px;
+  line-height: 22px;
+  padding: 13px 16px 13px 14px;
+  display: block;
+}
+.login-area .first {
+  margin-top: 10px;
+}
+
+.btns {
+  padding-top: 10px;
+}
+.btns .btn {
+  background-color: #ff6700;
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin-bottom: 14px;
   text-align: center;
   font-size: 14px;
-  display: block;
-  cursor: pointer;
-  overflow: hidden;
-  background-color: #ff6700;
-  margin-top: 15px;
-  border: 1px solid rgba(186, 186, 186, 0.3);
   color: #fff;
-}
-
-.privacy_box {
-  text-align: center;
-  padding-top: 40px;
+  cursor: pointer;
+  border: none;
 }
 
 .footer {
   height: 80px;
+  background: #fff;
   margin-top: 0;
   z-index: 4;
   text-align: center;

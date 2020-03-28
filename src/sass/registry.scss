@@ -1,0 +1,152 @@
+@charset "UTF-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
+    margin:0;
+    padding:0;
+    }
+    h1,h2,h3,h4,h5,h6{
+    font-size:12px;
+    font-weight:normal;
+    }
+    ol,ul,li{
+    list-style:none
+    }
+    b,strong{
+    font-weight:normal;
+    }
+    em,i{
+    font-style:normal;
+    }
+    a,u{
+    text-decoration:none;
+    }
+    img{
+    display:block;
+    }
+    .clear_fix::after{
+    content:"";
+    display:block;
+    clear:both;
+    height:0;
+    overflow:hidden;
+    }
+    .fl{
+    float:left;
+    }
+    .fr{
+    float:right;
+    }
+    input{
+    outline:none;
+    }
+body{
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+.box{
+    margin-top: 60px;
+}
+  .layout{
+    width: 854px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    background-color: #fff;
+  }
+  .concent{
+    padding-bottom: 30px;
+    background: #fff;
+    padding: 0 34px 0;
+    min-height: 300px;
+  }
+  .logo-area{
+    padding-bottom: 40px;
+    display: block;
+        a{
+        width: 49px;
+        height: 48px;
+        margin: 0 auto;
+        display: block;
+        cursor: default;
+        background-image: url(https://account.xiaomi.com/static/res/349d9c1/account-static/respassport/acc-2014/img/milogo.png);
+        }
+  }
+  .title{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+  }  
+  .regbox{
+    width: 400px;
+    padding: 30px 0;
+    line-height: 20px;
+    margin: 0 auto;
+    min-height: 10px;
+    // background-color: pink;
+    form{
+        display: block;
+        width: 400px;
+        margin-left:55px;
+    }
+    p{
+        line-height:50px;
+        font-size: 12px;
+        input{
+            width: 200px;
+            line-height: 30px;
+        }
+        span{
+            font-size: 12px;
+        }
+    }
+    }
+
+.sub{
+    input{
+        width: 330px;
+        height: 42px;
+        margin: 0 auto;
+        line-height: 42px;
+        text-align: center;
+        font-size: 14px;
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #ff6700;
+        margin-top: 15px;
+        border: 1px solid rgba(186,186,186,.3);
+        color:#fff;
+    }
+}
+.privacy_box{
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+// 底部
+.footer{
+    height:80px;
+    // background: #fff;
+    margin-top: 0;
+    z-index: 4;
+    text-align: center;
+    ul{
+        margin-top:100px;
+        color: #757575;
+    }
+    li{
+        display: inline-block;
+        a{
+            color: #757575;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+}
+.nf{
+    padding: 10px;
+    color: #757575;
+    font-size: 14px;
+    img{
+        display: inline-block;
+    }
+}
