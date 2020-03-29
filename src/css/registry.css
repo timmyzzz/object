@@ -114,10 +114,10 @@ body {
   font-size: 12px;
 }
 
-.sub input {
+.submit {
   width: 330px;
   height: 42px;
-  margin: 0 auto;
+  margin-left: -20px;
   line-height: 42px;
   text-align: center;
   font-size: 14px;

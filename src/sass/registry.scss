@@ -99,11 +99,11 @@ body{
     }
     }
 
-.sub{
-    input{
+
+    .submit{
         width: 330px;
         height: 42px;
-        margin: 0 auto;
+        margin-left: -20px;
         line-height: 42px;
         text-align: center;
         font-size: 14px;
@@ -115,7 +115,6 @@ body{
         border: 1px solid rgba(186,186,186,.3);
         color:#fff;
     }
-}
 .privacy_box{
     text-align: center;
     padding-top: 40px;

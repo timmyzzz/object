@@ -124,10 +124,7 @@ input {
   margin-top: 10px;
 }
 
-.btns {
-  padding-top: 10px;
-}
-.btns .btn {
+.login-area .btn {
   background-color: #ff6700;
   width: 100%;
   height: 50px;
