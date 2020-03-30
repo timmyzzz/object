@@ -123,12 +123,15 @@ img {
 }
 .goods-list-box ul li {
   float: left;
-  padding: 0 30px;
+  padding: 0 10px;
   border-left: 1px solid #e0e0e0;
   line-height: 20px;
 }
-.goods-list-box ul li a {
-  color: #424242;
+.goods-list-box ul li button {
+  width: 50px;
+  color: #f5f5f5;
+  background-color: #ff6700;
+  border: 1px solid #ff6700;
 }
 .goods-list-box ul .active a {
   color: #ff6700;

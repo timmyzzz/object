@@ -102,8 +102,8 @@ body {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  color: #b0b0b0;
-  background-color: #424242;
+  color: #fff;
+  background-color: #ff6700;
 }
 
 .cart-mini em {
@@ -323,9 +323,10 @@ body {
   right: 0;
   z-index: 2;
   width: 52px;
-  height: 48px;
-  font-size: 24px;
-  line-height: 24px;
+  height: 46px;
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
   background: #fff;
   color: #616161;
   position: absolute;

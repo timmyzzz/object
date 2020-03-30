@@ -85,8 +85,8 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: #b0b0b0;
-    background-color: #424242;
+    color: #fff;
+    background-color: #ff6700;
 }
 .cart-mini em{
     margin-right: 4px;
@@ -290,9 +290,10 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
             right: 0;
             z-index: 2;
             width: 52px;
-            height: 48px;
-            font-size: 24px;
-            line-height: 24px;
+            height: 46px;
+            font-size: 14px;
+            line-height: 46px;
+            text-align: center;
             background: #fff;
             color: #616161;
             position: absolute;
