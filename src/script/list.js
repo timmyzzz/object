@@ -14,7 +14,7 @@
             <div class='good-item'>
                 <div class="good-img">
                     <a href="detail.html?sid=${value.sid}">
-                        <img src="${value.url}" alt="">
+                        <img class="lazy" data-original="${value.url}" alt="">
                     </a>
                 </div>
                         <h2>
@@ -25,6 +25,10 @@
             `;
         });
         $list.html($strhtml);
+        $(function () {
+            $(".lazy").lazyload({ effect: "fadeIn" });
+        });
+
         array_default = [];
         array = [];
         prev = null;
@@ -101,6 +105,9 @@
         $('.goods-list').empty();//清空原来的列表
         $.each(array, function (index, value) {
             $('.goods-list').append(value);
+        });
+        $(function () {
+            $(".lazy").lazyload({ effect: "fadeIn" });
         });
     })
 
