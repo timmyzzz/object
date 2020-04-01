@@ -24,6 +24,7 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
     }
 //标题栏
 .title-box-wrap{
+    width: 100%;
     z-index: 4;
     background: #fff;
     border-top: 1px solid #e0e0e0;
@@ -112,7 +113,7 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
     #bf {
         width: 400px;
         height: 500px;
-        border: 1px solid #000;
+        border: 1px solid #ccc;
         overflow: hidden;
         position: absolute;
         left: 410px;
@@ -235,6 +236,13 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,figure,figcaption,fieldset,legend{
         border: 1px solid #e0e0e0;
         padding-left: 50px;
         padding: 30px 40px 30px 32px;
+        span{
+            margin-right: 14px;
+            font-size: 14px;
+        }
+        .change{
+            color: #ff6700;
+        }
     }
 }
 

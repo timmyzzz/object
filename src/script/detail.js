@@ -26,7 +26,7 @@
     }).done(function(g){
         $spic.attr("src",g.url);
         $spic.attr("sid",g.sid);
-        $bpic.attr("url",g.sid);
+        $bpic.attr("src",g.url);
         $title.html(g.title);
         $contitle.html(g.title);
         $price.html(g.price);
@@ -48,7 +48,7 @@
     $("#list ul").on("click","li",function(){
         let $spicurl = $(this).find("img").attr("src");
         $spic.attr("src",$spicurl);
-        $bpic.attr("url",$spicurl);
+        $bpic.attr("src",$spicurl);
     });
 
     //左右箭头滑动图片列表
@@ -112,5 +112,61 @@
     })
 
 
+    //放大镜效果
+    // const $spicbox = $('#spicbox');//小图盒子
+    // const $spic = $('#spic');//小图
+    // const $sf = $('#sf');//小放大镜
+    // const $bf = $('#bf');//大放大镜
+    // const $bpic = $('#bpic');//大图
+    // const $left = $('#left');//左边的按钮
+    // const $right = $('#right');//右边的按钮
+    // const $list = $('#list');//下面图片的列表
+    // const $title = $('.goods-title');//商品名
+    // const $price = $('.price');//价格
+    // const $contitle = $(".con-title");//大商品名
 
+    $sf.width($spic.width() * $bf.width() / $bpic.width());
+    $sf.height($spic.height() * $bf.height() / $bpic.height());
+    let $bili = $bpic.width() / $bf.width();
+    $spicbox.hover(function(){
+        $sf.css('visibility', 'visible');
+        $bf.css('visibility', 'visible');
+
+        $sf.on("mousemove",function(ev){
+            let $leftvalue = ev.pageX - $spicbox.offset().left-$sf.width()/2;
+            let $topvalue = ev.pageY - $spicbox.offset().top-$sf.height()/2;
+            if($leftvalue<0){
+                $leftvalue = 0;
+            }else if($leftvalue>=$spic.width()-$sf.width()){
+                $leftvalue=$spic.width()-$sf.width()
+            }
+            if($topvalue<0){
+                $topvalue = 0;
+            }else if($topvalue>=$spic.height()-$sf.height()){
+                $topvalue=$spic.height()-$sf.height()
+            }
+            $sf.css({
+                left:$leftvalue,
+                top:$topvalue
+            });
+            $bpic.css({
+                left:-$leftvalue*$bili,
+                top:-$topvalue*$bili
+            });
+        })
+    },function(){
+        $sf.css('visibility', 'hidden');
+        $bf.css('visibility', 'hidden');
+    });
+
+
+    //顶部悬浮
+    let $titlebox = $(".title-box-wrap");
+    $(window).on("scroll",function(){
+        if($(window).scrollTop()>=200){
+            $titlebox.css("position","fixed").css("top","0");
+        }else{
+            $titlebox.css("position","static")
+        }
+    })
 }(jQuery);
