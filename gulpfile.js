@@ -31,9 +31,9 @@ gulp.task('uglifyhtml', () => {
 });
 //压缩css
 gulp.task('uglifycss', () => {
-    return gulp.src('src/style/*.css')
+    return gulp.src('src/css/*.css')
         .pipe(css())//执行压缩
-        .pipe(gulp.dest('dist/style/'));
+        .pipe(gulp.dest('dist/css/'));
 });
 //4.压缩js
 gulp.task('uglifyjs', () => {
